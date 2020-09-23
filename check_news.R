@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 maker_key = commandArgs(trailingOnly = TRUE)
 if (length(maker_key) != 1) {
-  stop("key must be provided", call. = FALSE)
+  stop("maker key must be provided", call. = FALSE)
 }
 
 if (!requireNamespace("xml2")) {
