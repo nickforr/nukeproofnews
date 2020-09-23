@@ -24,3 +24,9 @@ jobs:
         run: |
           echo Check this is working
           Rscript -e 'source("check_news.R", echo = TRUE)'
+      
+      - name: Upload artifact                      
+        uses: actions/upload-artifact@v2                        
+        with:                                 
+          name: news                                 
+          path: news.json
