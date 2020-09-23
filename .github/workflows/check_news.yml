@@ -30,3 +30,8 @@ jobs:
         with:                                 
           name: news                                 
           path: news.json
+      
+      - name: finish check
+        run: |
+          echo Check this worked
+      
