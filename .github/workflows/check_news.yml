@@ -26,5 +26,5 @@ jobs:
           MAKER_KEY: ${{ secrets.MAKER_KEY }}
         run: |
           echo Check this is working
-          Rscript check_news.R "MAKER_KEY"
+          Rscript check_news.R "$MAKER_KEY"
       
