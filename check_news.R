@@ -33,5 +33,7 @@ maker_body <-
     value2 = latest_news[2], 
     value3 = latest_news[3]
   )
-suppressMessages({res <- httr::POST(maker_url, body = maker_body)})
+suppressMessages({
+  res <- httr::POST(maker_url, body = maker_body, encode = "json")
+})
 httr::status_code(res)
