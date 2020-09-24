@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 maker_key = commandArgs(trailingOnly = TRUE)
 if (length(maker_key) != 1) {
-  stop("key must be provided", call. = FALSE)
+  stop("maker key must be provided", call. = FALSE)
 }
 
 if (!requireNamespace("xml2")) {
@@ -36,4 +36,5 @@ maker_body <-
 suppressMessages({
   res <- httr::POST(maker_url, body = maker_body, encode = "json")
 })
+latest_news
 httr::status_code(res)
